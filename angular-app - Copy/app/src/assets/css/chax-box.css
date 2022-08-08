@@ -1,0 +1,276 @@
+:root {
+    --nav-icon: rgb(243, 243, 45);
+    --bg-nav: #ffffff;
+    --main-about-color: #191F3A;
+    --sub-color: #EAA023;
+    --text-color: #FFFFFF;
+}
+
+.body {
+    overflow: scroll;
+}
+
+#chatApp {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+}
+
+.show {
+    display: block;
+}
+
+.thumb-user-list {
+    display: none;
+}
+
+.thumb-user-list .image img {
+    border-radius: 30px;
+}
+
+.chatBox {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.chatBox.active {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 50px;
+    margin: 40px;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.chat-content {
+    overflow: auto;
+    height: 300px;
+}
+
+.chatBox .card {
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 13%) !important;
+}
+
+.chatBox .card-header {
+    position: relative;
+    background: #683db8;
+}
+
+.header-title {
+    height: 50px;
+}
+
+.card-header-title i {
+    font-size: 10px;
+    color: #32e4cd;
+    margin-right: 6px;
+}
+
+.card-header .card-header-title {
+    color: #FFF;
+}
+
+.chat-content small {
+    margin: 0;
+}
+
+.chat-content p {
+    background: #ecf1f8;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.my-content .media-content {
+    width: 80%;
+}
+
+.my-content .message {
+    float: right;
+    background: #683db8;
+    color: #FFF;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.my-content .chat-content small {
+    float: right;
+}
+
+.my-content small {
+    display: block;
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.chat-textarea {
+    font-size: 13px;
+    padding: 8px;
+    height: 40px;
+    width: 90%;
+    border: none;
+    overflow: auto;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+}
+
+.btn {
+    border-radius: 20px;
+    border: 3px solid var(--sub-color);
+    color: var(--sub-color)
+}
+
+.btn:hover {
+    background-color: var(--main-about-color);
+    color: var(--text-color);
+}
+
+.chat-message-group {}
+
+.chat-message-group .chat-thumb {
+    float: left;
+    width: 20%;
+}
+
+.chat-message-group .chat-messages {
+    float: left;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.chat-message-group .message {
+    float: left;
+    padding: 10px;
+    background: #ecf1f8;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+.chat-messages .from span {
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+}
+
+.chat-thumb img {
+    border-radius: 40px;
+}
+
+.writer-user .chat-messages {
+    float: right;
+    width: 100%;
+}
+
+.writer-user .chat-messages .message {
+    float: right;
+    background: #683db8;
+    font-size: 12px !important;
+    color: #FFF;
+}
+
+.writer-user .chat-messages .from span {
+    float: left;
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+}
+
+.chat-message-group .typing {
+    float: left;
+}
+
+.chat-message-group .typing span {
+    font-size: 12px;
+}
+
+.chatBox .card-header-icon i {
+    color: #FFF;
+    padding: 5px;
+    background-color: var(--bg-nav);
+    font-size: 13px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+
+/* CSSS */
+
+.outside-box {
+    height: 100px;
+    background: #F8C;
+    width: 200px;
+    margin: 20px;
+    overflow: auto;
+}
+
+.outside-box .content-insider {
+    height: 300px;
+    background: #C9C;
+}
+
+#input_mess {
+    display: flex;
+}
+
+#input_mess #send {
+    margin: 7px 6px;
+}
+
+
+/* CSS Spinner */
+
+.spinner {
+    margin: 0 30px;
+    width: 70px;
+    text-align: center;
+}
+
+.spinner>div {
+    width: 4px;
+    height: 4px;
+    background-color: #888;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+
+/* chatTextarea */
+
+
+/* EmojiBox */
+
+.emojiBox {
+    width: 150px;
+    margin: 30px;
+}
+
+.emojiBox .box {
+    height: 100px;
+    padding: 4px;
+}
+
+
+/* */
+
+.card-header-title img {
+    border-radius: 40px;
+}

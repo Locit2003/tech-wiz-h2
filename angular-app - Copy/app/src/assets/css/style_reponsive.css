@@ -1,0 +1,49 @@
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) {
+    .tempaltemo-carousel .h1 {
+        font-size: 1em !important;
+    }
+    .decorate_blog_bt {
+        font-size: 11px !important;
+        width: 100px;
+    }
+}
+
+
+/*// Medium devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    #etpmmo_main_nav .navbar-nav {
+        max-width: 450px;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    #openmenu {
+        display: none !important;
+    }
+    .decorate_blog_bt {
+        font-size: 16px !important;
+        width: 180px;
+    }
+    #etpmmo_main_nav .navbar-nav {
+        max-width: 550px;
+    }
+    #etpm-mo-zay-hero-carousel .carousel-item {
+        min-height: 30rem !important;
+    }
+    .product-wap .h3,
+    .product-wap li,
+    .product-wap i,
+    .product-wap p {
+        font-size: 18px !important;
+    }
+    .product-wap .product-color-dot {
+        width: 12px;
+        height: 12px;
+    }
+}

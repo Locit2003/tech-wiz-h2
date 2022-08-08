@@ -1,0 +1,82 @@
+<%- include('header') %>
+
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img src="https://cdn.hinhnen4k.net/uploads/2021/11/night_sky_night_stars_202408_3840x2160.jpg" width="100%"
+                height="660">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row mt-2">
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Đăng nhập tài khoản</h1>
+                                    </div>
+                                    <form action="/login" method="POST" role="form" id="login_form">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="" name="email"
+                                                placeholder="Input name">
+                                            <small id="email_error" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="" name="password"
+                                                placeholder="Input password">
+                                            <small id="password_error" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                                        <hr>
+                                        <a href="/login" class="btn btn btn-danger btn-user btn-block">
+                                            <i class="fab fa-google fa-fw"></i> Login with Google
+                                        </a>
+                                        <a href="/login" class="btn btn-success btn-user btn-block">
+                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                                        </a>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small text-warning" href="/password">Forgot password?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small text-warning" href="/register">Create an account!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer') %>
+
+        <script>
+            login_form.onsubmit = function () {
+                if (login_form.email.value == '') {
+                    login_form.email.style.border = '1px solid red';
+                    email_error.innerHTML = 'Voi lòng nhập email';
+                    login_form.email.focus();
+                } else {
+                    email_error.innerHTML = '';
+                    login_form.email.style.border = '1px solid lightblue';
+                };
+
+                if (login_form.password.value == '') {
+                    login_form.password.style.border = '1px solid red';
+                    password_error.innerHTML = 'Không được để trống';
+                    login_form.password.focus();
+                    return false;
+                } else {
+                    password_error.innerHTML = '';
+                    login_form.password.style.border = '1px solid lightblue';
+                };
+            }
+        </script>

@@ -1,0 +1,171 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow sticky-nav p-r">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+           LOGO
+        </a>
+
+        <button class="navbar-toggler border-0 btn_hidden_icon" type="button" data-bs-toggle="collapse" data-bs-target="#etpmmo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="full" style="" id="openmenu">
+            <span class="toggle_icon" style="cursor:pointer"></span>
+        </div>
+
+        <div class="sticky-nav align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="etpmmo_main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="shop">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar align-self-center d-flex">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class=" flex-fill d-n d-lg-flex justify-content-lg-between align-self-center">
+                    <form action="#" id="form">
+                        <input type="search" placeholder="Search..." id="search">
+                    </form>
+                    <div class="seacrch">
+                        <a class="nav-icon d-none d-lg-inline" href="#">
+                            <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                        </a>
+                        <a class="nav-icon d-none d-lg-inline" href="#" *ngIf="!account">
+                        </a>
+                        <div *ngIf="account">
+                            <a class="nav-icon d-none d-lg-inline" href="#">
+                                {{account.name}}
+                              </a>
+                            <a (click)="logout()">logout</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="default_theme">
+    <div id="mySidenav" class="sidenav">
+        <ul class="menu_sidebar">
+            <li class="mt-4"><a class="btn_close" href="javascript:void(0)" class="closebtn">x</a></li>
+            <li><a class=" mt-4" href="#faq">01. what_we_do</a></li>
+            <li><a class=" mt-4" href="about.html">02. About</a></li>
+            <li><a class=" mt-4" href="what_we_do.html">03. What we do</a></li>
+            <li><a class=" mt-4" href="testimonial.html">04. Testimonial</a></li>
+            <li><a class=" mt-4" href="contact.html">05. Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="cosical_medium">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full center">
+                    <ul class="social_icon">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="full text-center">
+                    <p>© 2020 All Rights Reserved. <a href="https://html.design">html.design</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="chatApp">
+    <div class="chatBox" id="chatBox">
+        <div class="card">
+
+            <div class="card-header header-title">
+                <p class="card-header-title">
+                    <i class="fa fa-circle is-online"></i><img src="" style="width: 30px;">&nbsp;
+                </p>
+                <a class="card-header-icon">
+                    <span class="icon">
+                        <i class="fa-solid fa-xmark" style="color:#000000"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div id="chatbox-area">
+                <div class="card-content chat-content">
+                    <div class="content">
+                        <div class="chat-message-group">
+                            <div class="chat-thumb">
+                                <figure class="image is-32x32">
+                                    <img style="width:30px" src="img/default_user.png">
+                                </figure>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="message">xin chào tôi có thể giúp gì được cho bạn</div>
+                                <div class="from"><span>date:00:00</span></div>
+                            </div>
+                        </div>
+                        <div class="chat-message-group writer-user">
+                            <div class="chat-messages">
+                                <div class="message">Mình muốn mua một sản phẩm bên bạn</div>
+                                <div class="from">
+                                    <span>date:00:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-message-group">
+                            <div class="chat-thumb">
+                                <figure class="image is-32x32">
+                                    <img style="width:30px" src="img/default_user.png">
+                                </figure>
+                            </div>
+                            <div class="chat-messages">
+                                <div class="message">không biết bạn muôn mua loại sản phẩm nào bên mình ạ</div>
+                                <div class="from"><span>date:00:00</span></div>
+                            </div>
+                        </div>
+                        <div class="chat-message-group">
+                            <div class="typing"><span>Typing</span></div>
+                            <div class="spinner">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="card-footer" id="chatBox-textbox">
+                    <div id="input_mess">
+                        <textarea id="chatTextarea" class="chat-textarea" placeholder="chat"></textarea>
+                        <div id="send">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</div>

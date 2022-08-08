@@ -1,0 +1,74 @@
+<div class="main">
+    <div class="veen">
+        <div class="login-btn splits">
+            <p>Already an user?</p>
+            <button class="active" (click)="eventClickLogin()">Login</button>
+        </div>
+        <div class="rgstr-btn splits">
+            <p>Don't have an account?</p>
+            <button (click)="eventClickRegis()">Register</button>
+        </div>
+        <div class="wrapper">
+            <form id="login" tabindex="500" [formGroup]="formLogion" (submit)="onlogin()">
+                <div class="alert alert-danger" role="alert" *ngIf="checkedError">
+                    <strong>{{checkedError}}</strong>
+                </div>
+                <h3>Login</h3>
+                <div class="mail">
+                    <input type="mail" formControlName="email" ng-model="cus.tk">
+                    <label>Mail</label>
+                    <div *ngIf="f['email'].touched && f['email'].errors">
+                        <small *ngIf="f['email'].errors['required']">Email khong duoc de trong</small>
+                        <small *ngIf="f['email'].errors['email']">Email ko dung dinh dang</small>
+                        <small *ngIf="f['email'].errors['minlength']">Email it nhat 12 ky tu</small>
+                    </div>
+                </div>
+                <div class="passwd">
+                    <input type="password" formControlName="password" ng-model="cus.password">
+                    <label>Password</label>
+                    <div *ngIf="f['password'].touched && f['password'].errors">
+                        <small *ngIf="f['password'].errors['required']">mat khau khong duoc de trong</small>
+                    </div>
+                </div>
+                <div class="submit">
+                    <button type="submit" class="dark" [disabled]="f['email'].errors || f['password'].errors">Login</button>
+                </div>
+                <small></small>
+            </form>
+            <!-- form dang ky -->
+            <form id="register" tabindex="502" [formGroup]="formRegister" (click)="register()">
+                <h3>Register</h3>
+                <div class="name">
+                    <input type="text" name="" id="fullname" ng-model="user.full_name" formControlName="name">
+                    <label>Full Name</label>
+                    <div *ngIf="r['name'].touched && r['name'].errors">
+                        <small *ngIf="r['name'].errors['required']">Ten khong duoc de trong</small>
+                        <small *ngIf="r['name'].errors['minlength']">ten it nhat 5 ky tu</small>
+                    </div>
+                </div>
+                <div class="mail">
+                    <input type="mail" name="" id="email" ng-model="user.email" formControlName="email">
+                    <label>Mail</label>
+                    <div *ngIf="r['email'].touched && r['email'].errors">
+                        <small *ngIf="r['email'].errors['required']">Email khong duoc de trong</small>
+                        <small *ngIf="r['email'].errors['email']">Email ko dung dinh dang</small>
+                        <small *ngIf="r['email'].errors['minlength']">Email it nhat 12 ky tu</small>
+                    </div>
+                </div>
+                <div class="passwd">
+                    <input type="password" name="" id="password" ng-model="user.password" formControlName="password">
+                    <label>Password</label>
+                    <div *ngIf="r['password'].touched && r['password'].errors">
+                        <small *ngIf="r['password'].errors['required']">mat khau khong duoc de trong</small>
+                    </div>
+                </div>
+                <div class="submit">
+                    <button class="btn_submit" type="submit" [disabled]="r['email'].errors || r['password'].errors || r['password'].errors">Register</button>
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="checkedError">
+                    <strong>{{checkedError}}</strong>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

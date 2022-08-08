@@ -1,0 +1,50 @@
+#openmenu {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    /* top: 20px; */
+    width: 50px;
+    height: 50px;
+    right: 40px;
+}
+
+#openmenu .toggle_icon::before {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: var(--nav-icon);
+    position: absolute;
+    display: block;
+    transform: translateY(-8px)
+}
+
+#openmenu.active .toggle_icon::before {
+    transform: rotate(-45deg)
+}
+
+#openmenu.active .toggle_icon {
+    background-color: var(--bg-nav);
+}
+
+#openmenu.active .toggle_icon::after {
+    transform: rotate(45deg)
+}
+
+#openmenu .toggle_icon {
+    width: 25px;
+    height: 2px;
+    background-color: var(--nav-icon);
+    display: block;
+    position: relative;
+}
+
+#openmenu .toggle_icon::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: var(--nav-icon);
+    display: block;
+    position: absolute;
+    transform: translateY(8px)
+}

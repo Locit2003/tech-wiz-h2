@@ -1,0 +1,24 @@
+/* Hero Carousel */
+
+#etpm-mo-zay-hero-carousel {
+    background: #efefef !important;
+}
+
+#etpm-mo-zay-hero-carousel .carousel-indicators li {
+    margin-top: -50px;
+    background-color: #59ab6e;
+}
+
+#etpm-mo-zay-hero-carousel .carousel-control-next i,
+#etpm-mo-zay-hero-carousel .carousel-control-prev i {
+    color: #ffffff !important;
+    font-size: 2.8em !important;
+}
+
+
+/* Carousel Brand */
+
+.tempaltemo-carousel .h1 {
+    font-size: .5em !important;
+    color: #000 !important;
+}
